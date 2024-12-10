@@ -14,7 +14,6 @@
 |                       | - `size` (optional): Maximum number of records per page (default 25, max 5000)                         |
 |                       | - `search-after` (optional): Token for fetching the next page of results (used for pagination)          |
 | **Response Format**  | Comma Separated Values (CSV)                                                                            |
-                                                                                              |
 | **Pagination Details**| - Uses the `X-Next-Search-After` header in the response.<br>- Include `search-after=<token>` in subsequent requests to fetch additional pages. |
 | **Rate Limits**       | 5000 rows per request – unlimited* requests                                                            |
 | **Error Handling**    | - `[401 Unauthorized]`: Verify the `Authorization` header and token<br>- `[400 Bad Request]`: Check query parameters for typos or missing values<br>- `[500 Internal Server Error]`: Retry after a short delay or check API status |
