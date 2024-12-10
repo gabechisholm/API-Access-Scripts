@@ -1,0 +1,32 @@
+SmartNarrativeCorrelation = 
+VAR R2Value = [R² Value]
+VAR CorrelationValue = [Correlation]
+VAR CorrelationType =
+    SWITCH(
+        TRUE(),
+        CorrelationValue = "N/A", "<b>no</b>",
+        CorrelationValue >= 0.8, "<b>a strong positive</b>",
+        CorrelationValue >= 0.5, "<b>a moderate positive</b>",
+        CorrelationValue > 0, "<b>a weak positive</b>",
+        CorrelationValue <= -0.8, "<b>a strong negative</b>",
+        CorrelationValue <= -0.5, "<b>a moderate negative</b>",
+        CorrelationValue < 0, "<b>a weak negative</b>",
+        "no"
+    )
+VAR R2Interpretation = 
+    SWITCH(
+        TRUE(),
+        R2Value = "N/A", "<b>no</b>",
+        R2Value >= 0.8, "<b>strong</b>",
+        R2Value >= 0.5, "<b>moderate</b>",
+        R2Value >= 0.3, "<b>weak</b>",
+        R2Value > 0, "<b>very weak</b>",
+        "<b>no</b>"
+    )
+RETURN 
+    "<div style='background-color: #749513; padding: 5px;'>
+        The R² value is " & FORMAT(R2Value, "0.00") & 
+        ", which indicates a " & R2Interpretation & " relationship between the two indicators. " & 
+        "The correlation coefficient is " & FORMAT(CorrelationValue, "0.00") & 
+        ", suggesting " & CorrelationType & " correlation between the variables.
+    </div>"
