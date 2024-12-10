@@ -20,7 +20,6 @@
 | **Notes**             | - Maximum page size is 5000 records.<br>- Use the `search-after` token from the response headers for pagination.<br>- Ensure the `Authorization` token is encoded in Base64. |
 | **Last Updated**      | 26/11/2024                                                                                            |
 | **Author**            | Gabe Chisholm                                                                                         |
-                                                                                      |
 
 ## api_cdrc.R
 Replace **USERNAME** and **PASSWORD** with your actual credentials
