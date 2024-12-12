@@ -1,5 +1,5 @@
 # Table of Contents
-- [CDRC API](#consumer-data-research-centre-(CDRC))
+- [CDRC API](#consumer-data-research-centre)
 - [EPC API](#energy-performance-certificates)
 - [LGInform API](#api_lginform.R)
 
