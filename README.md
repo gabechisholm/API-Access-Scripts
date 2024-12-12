@@ -1,11 +1,11 @@
 # Table of Contents
-- [CDRC API](#consumer-data-research-centre)
-- [EPC API](#energy-performance-certificates)
+- [CDRC API](#consumer-data-research-centre-cdrc)
+- [EPC API](#energy-performance-certificates-epc)
 - [LGInform API](#api_lginform.R)
 
 ---
 
-# Energy Performance Certificates
+# Energy Performance Certificates (EPC)
 ## api_epc.R
 | **API Name**         | EPC Domestic Energy API                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------|
@@ -28,7 +28,7 @@
 | **Last Updated**      | 26/11/2024                                                                                            |
 | **Author**            | Gabe Chisholm                                                                                         |
 
-# Consumer Data Research Centre
+# Consumer Data Research Centre (CDRC)
 ## api_cdrc.R
 Replace **USERNAME** and **PASSWORD** with your actual credentials
 Please see: https://epc.opendatacommunities.org/docs/api/domestic#domestic-local-authority for further detail on filling in **line 4**
