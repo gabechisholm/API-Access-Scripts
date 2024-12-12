@@ -1,7 +1,7 @@
 # Table of Contents
-- [CDRC API](api_cdrc.R)
-- [EPC API](#api_epc.R)
-- [LGInform API](api_lginform.R)
+- [CDRC API](#api_cdrc.R)
+- [EPC API](#energy-performance-certificates)
+- [LGInform API](#api_lginform.R)
 
 ---
 
