@@ -1,5 +1,5 @@
 # Table of Contents
-- [CDRC API](#api_cdrc.R)
+- [CDRC API](#consumer-data-research-centre-(CDRC))
 - [EPC API](#energy-performance-certificates)
 - [LGInform API](#api_lginform.R)
 
@@ -28,7 +28,8 @@
 | **Last Updated**      | 26/11/2024                                                                                            |
 | **Author**            | Gabe Chisholm                                                                                         |
 
-# api_cdrc.R
+# Consumer Data Research Centre (CDRC)
+## api_cdrc.R
 Replace **USERNAME** and **PASSWORD** with your actual credentials
 Please see: https://epc.opendatacommunities.org/docs/api/domestic#domestic-local-authority for further detail on filling in **line 4**
 | **Field**             | **Details**                                                                                           |
