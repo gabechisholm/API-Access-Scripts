@@ -57,38 +57,45 @@ Please see: https://epc.opendatacommunities.org/docs/api/domestic#domestic-local
 ##api_lginform.R
 | **Field**             | **Details**                                                                                                                                       |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| **API Name**          | LGInform/ESD Web Services API                                                                                                                    |
+| **Purpose**           | Provides public health data indicators for specified metrics and areas                                                                           |
+| **API Type**          | Web JSON                                                                                                                                         |
+| **Access Method**     | Power Query M Script                                                                                                                             |
+| **Base URL**          | [https://webservices.esd.org.uk/data.table](https://webservices.esd.org.uk/data.table)                                                           |
+| **Supported Methods** | GET                                                                                                                                              |
+| **Authentication**    | API Key (passed as a parameter in the query string for security reasons)                                                                         |
+| **Headers Required**  | Not applicable                                                                                                                                   |
+| **Request Format**    | - Query Parameters: Append `metricType`, `area`, and `period` to the base URL <br> - API key passed using `ApplicationKey`                        |
+| **Query Parameters**  | - `valueType`: Specifies the data type (e.g., `raw`) <br> - `metricType`: Comma-separated list of metric identifiers <br> - `area`: Comma-separated list of areas (e.g., local authorities) <br> - `period`: Specifies the time period (e.g., `latest:5`) |
 | **Response Format**   | JSON converted to Power BI table                                                                                                                 |
-| **Sample Response**   | ```json                                                                                                                                        |
-|                       | {                                                                                                                                               |
-|                       |     "metricTypeIdentifier": "10749",                                                                                                            |
-|                       |     "metricTypeLabel": "English Baccalaureate - Average Point Score per pupil",                                                                 |
-|                       |     "metricTypeAltLabel": "English Baccalaureate - Average Point Score per pupil",                                                              |
-|                       |     "metricTypeIsSummary": false,                                                                                                               |
-|                       |     "areaIdentifier": "E06000001",                                                                                                             |
-|                       |     "areaLabel": "Hartlepool",                                                                                                                  |
-|                       |     "areaAltLabel": "Hartlepool",                                                                                                               |
-|                       |     "areaLongLabel": "Hartlepool (Unitary)",                                                                                                     |
-|                       |     "areaIsSummary": false,                                                                                                                     |
-|                       |     "periodIdentifier": "sch_2018_19",                                                                                                          |
-|                       |     "periodLabel": "2018/19 (academic)",                                                                                                        |
-|                       |     "periodAltLabel": "2018/19 (academic)",                                                                                                     |
-|                       |     "periodIsSummary": false,                                                                                                                   |
-|                       |     "valueTypeIdentifier": "raw",                                                                                                               |
-|                       |     "valueTypeLabel": "Mean",                                                                                                                   |
-|                       |     "valueTypeIsSummary": false,                                                                                                                |
-|                       |     "value": 3.51,                                                                                                                             |
-|                       |     "source": 3.51,                                                                                                                            |
-|                       |     "formatted": "3.51",                                                                                                                       |
-|                       |     "format": "#,##0.00",                                                                                                                      |
-|                       |     "publicationStatus": "Published"                                                                                                           |
-|                       | }                                                                                                                                               |
+| **Sample Response**   | ```json                                                                                                                                         |
+| {                                                                                                                                                                       |
+|     "metricTypeIdentifier": "10749",                                                                                                                                    |
+|     "metricTypeLabel": "English Baccalaureate - Average Point Score per pupil",                                                                                         |
+|     "metricTypeAltLabel": "English Baccalaureate - Average Point Score per pupil",                                                                                      |
+|     "metricTypeIsSummary": false,                                                                                                                                       |
+|     "areaIdentifier": "E06000001",                                                                                                                                      |
+|     "areaLabel": "Hartlepool",                                                                                                                                          |
+|     "areaAltLabel": "Hartlepool",                                                                                                                                       |
+|     "areaLongLabel": "Hartlepool (Unitary)",                                                                                                                            |
+|     "areaIsSummary": false,                                                                                                                                             |
+|     "periodIdentifier": "sch_2018_19",                                                                                                                                  |
+|     "periodLabel": "2018/19 (academic)",                                                                                                                               |
+|     "periodAltLabel": "2018/19 (academic)",                                                                                                                            |
+|     "periodIsSummary": false,                                                                                                                                           |
+|     "valueTypeIdentifier": "raw",                                                                                                                                       |
+|     "valueTypeLabel": "Mean",                                                                                                                                           |
+|     "valueTypeIsSummary": false,                                                                                                                                        |
+|     "value": 3.51,                                                                                                                                                     |
+|     "source": 3.51,                                                                                                                                                    |
+|     "formatted": "3.51",                                                                                                                                               |
+|     "format": "#,##0.00",                                                                                                                                              |
+|     "publicationStatus": "Published"                                                                                                                                   |
+| }                                                                                                                                                                       |
+| ```                                                                                                                                                                     |
 | **Pagination Details**| Not applicable (all data is fetched in one call)                                                                                                |
 | **Rate Limits**       | 10,000mb of data per month                                                                                                                      |
-| **Error Handling**    | - **Ensure the API key is valid** <br> **Check query parameters for typos unsupported metrics/areas.** <br> **Check for errors before deploying| 
-                        **|
-                        **Logic Here"|
-| **Notes      Responser Here Submit" validation
-Additop  Notes field|
-                        add retry Logic Errors Fall case checkup Datamodel Append execution |
-
- Try connecting safe JSON Pagination Logic Data flow Retry case **!
+| **Error Handling**    | - Ensure the API key is valid <br> - Check query parameters for typos and unsupported metrics/areas <br> - [500 Internal Server Error]: Retry after a short delay |
+| **Notes**             | - The API key (`ApplicationKey`) must be stored securely in Power BI <br> - Results include metadata such as confidence intervals, publication status, and formatting details |
+| **Last Updated**      | 26/11/2024                                                                                                                                      |
+| **Author**            | Gabe Chisholm                                                                                                                                   |
