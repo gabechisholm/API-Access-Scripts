@@ -5,8 +5,8 @@
 
 ---
 
-# api_epc.R
-## Energy Performance Certificates
+# Energy Performance Certificates
+## api_epc.R
 | **API Name**         | EPC Domestic Energy API                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------|
 | **Purpose**          | Provides energy performance data for domestic properties in specified local authorities                 |
@@ -28,7 +28,7 @@
 | **Last Updated**      | 26/11/2024                                                                                            |
 | **Author**            | Gabe Chisholm                                                                                         |
 
-# Consumer Data Research Centre (CDRC)
+# Consumer Data Research Centre
 ## api_cdrc.R
 Replace **USERNAME** and **PASSWORD** with your actual credentials
 Please see: https://epc.opendatacommunities.org/docs/api/domestic#domestic-local-authority for further detail on filling in **line 4**
