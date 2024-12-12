@@ -1,7 +1,7 @@
 # Table of Contents
-- [CDRC API](api_cdrc.r)
+- [CDRC API](api_cdrc.R)
 - [EPC API](#api_epc.R)
-- [LGInform API](api_lginform.r)
+- [LGInform API](api_lginform.R)
 
 ---
 
