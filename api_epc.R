@@ -1,3 +1,4 @@
+# Replace "local-authority" with your desired local authority. Default is Hartlepool. 
 library(curl)
 base_url <- "https://epc.opendatacommunities.org/api/v1/domestic/search?local-authority=E06000001&size=5000"
 auth_header <- "Basic ATTACH-TOKEN-HERE"
