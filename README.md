@@ -2,6 +2,7 @@
 - [CDRC API](#consumer-data-research-centre-cdrc)
 - [EPC API](#energy-performance-certificates-epc)
 - [LGInform API](#local-government-inform-lginform)
+- [Fingertips API](#fingertips)
 
 ---
 
@@ -54,7 +55,7 @@ Please see: https://epc.opendatacommunities.org/docs/api/domestic#domestic-local
 | **Author**            | Gabe Chisholm                                                                                       |
 
 # Local Government Inform (LGInform)
-##api_lginform.R
+## api_lginform.R
 | **Field**             | **Details**                                                                                                                                       |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | **API Name**          | LGInform/ESD Web Services API                                                                                                                    |
@@ -75,5 +76,26 @@ Please see: https://epc.opendatacommunities.org/docs/api/domestic#domestic-local
 | **Notes**             | - The API key (`ApplicationKey`) must be stored securely in Power BI <br> - Results include metadata such as confidence intervals, publication status, and formatting details |
 | **Last Updated**      | 26/11/2024                                                                                                                                      |
 | **Author**            | Gabe Chisholm                                                                                                                                   |
-                                                                                                                              |
-                                                                                                                                |
+
+# Fingertips 
+## api_fingertips.R
+| **Field**             | **Details**                                                                                                                                       |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| **API Name**          | Fingertips All Indicators for Multiple Regions                                                                                                    |
+| **Purpose**           | Retrieves public health indicators for specified areas and indicators matching a keyword search                                                  |
+| **API Type**          | R-based library                                                                                                                                  |
+| **Access Method**     | R script using the [`fingertipsR`](https://cran.r-project.org/web/packages/fingertipsR/index.html) library                                       |
+| **Base URL**          | Not applicable (handled internally by the `fingertipsR` package)                                                                                |
+| **Supported Methods** | R function calls (`fingertips_data(IndicatorID, AreaTypeID)`)                                                                                   |
+| **Authentication**    | Not required (publicly accessible)                                                                                                              |
+| **Headers Required**  | Not applicable                                                                                                                                   |
+| **Request Format**    | Function calls in R: `fingertips_data(IndicatorID, AreaTypeID)`                                                                                  |
+| **Query Parameters**  | - `IndicatorID`: ID of the indicator(s) to fetch <br> - `AreaTypeID`: Type of area (e.g., 502 for local authorities)                             |
+| **Response Format**   | R data frame                                                                                                                                    |
+| **Sample Response**   | `"The data has been successfully written to .csv files."`                                                                                       |
+| **Pagination Details**| Not applicable (handles large datasets internally)                                                                                              |
+| **Rate Limits**       | No known rate limits                                                                                                                            |
+| **Error Handling**    | - Invalid `IndicatorID` or `AreaTypeID` returns an empty dataset                                                                                |
+| **Notes**             | - Parallel processing is used to improve performance when querying multiple indicators and areas <br> - Data is exported to CSV files, one per area |
+| **Last Updated**      | 27/11/2024                                                                                                                                      |
+| **Author**            | Gabe Chisholm                                                                                                                                   |
