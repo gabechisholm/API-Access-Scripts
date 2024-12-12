@@ -1,3 +1,10 @@
+# Table of Contents
+- [CDRC API](api_cdrc.r)
+- [EPC API](#api_epc.R)
+- [LGInform API](api_lginform.r)
+
+---
+
 ## api_epc.R
 # Energy Performance Certificates
 | **API Name**         | EPC Domestic Energy API                                                                                  |
