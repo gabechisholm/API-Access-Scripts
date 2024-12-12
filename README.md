@@ -1,7 +1,7 @@
 # Table of Contents
 - [CDRC API](#consumer-data-research-centre-cdrc)
 - [EPC API](#energy-performance-certificates-epc)
-- [LGInform API](#api_lginform.R)
+- [LGInform API](#local-government-inform-lginform)
 
 ---
 
@@ -53,3 +53,42 @@ Please see: https://epc.opendatacommunities.org/docs/api/domestic#domestic-local
 | **Last Updated**      | 26/11/2024                                                                                          |
 | **Author**            | Gabe Chisholm                                                                                       |
 
+# Local Government Inform (LGInform)
+##api_lginform.R
+| **Field**             | **Details**                                                                                                                                       |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Response Format**   | JSON converted to Power BI table                                                                                                                 |
+| **Sample Response**   | ```json                                                                                                                                        |
+|                       | {                                                                                                                                               |
+|                       |     "metricTypeIdentifier": "10749",                                                                                                            |
+|                       |     "metricTypeLabel": "English Baccalaureate - Average Point Score per pupil",                                                                 |
+|                       |     "metricTypeAltLabel": "English Baccalaureate - Average Point Score per pupil",                                                              |
+|                       |     "metricTypeIsSummary": false,                                                                                                               |
+|                       |     "areaIdentifier": "E06000001",                                                                                                             |
+|                       |     "areaLabel": "Hartlepool",                                                                                                                  |
+|                       |     "areaAltLabel": "Hartlepool",                                                                                                               |
+|                       |     "areaLongLabel": "Hartlepool (Unitary)",                                                                                                     |
+|                       |     "areaIsSummary": false,                                                                                                                     |
+|                       |     "periodIdentifier": "sch_2018_19",                                                                                                          |
+|                       |     "periodLabel": "2018/19 (academic)",                                                                                                        |
+|                       |     "periodAltLabel": "2018/19 (academic)",                                                                                                     |
+|                       |     "periodIsSummary": false,                                                                                                                   |
+|                       |     "valueTypeIdentifier": "raw",                                                                                                               |
+|                       |     "valueTypeLabel": "Mean",                                                                                                                   |
+|                       |     "valueTypeIsSummary": false,                                                                                                                |
+|                       |     "value": 3.51,                                                                                                                             |
+|                       |     "source": 3.51,                                                                                                                            |
+|                       |     "formatted": "3.51",                                                                                                                       |
+|                       |     "format": "#,##0.00",                                                                                                                      |
+|                       |     "publicationStatus": "Published"                                                                                                           |
+|                       | }                                                                                                                                               |
+| **Pagination Details**| Not applicable (all data is fetched in one call)                                                                                                |
+| **Rate Limits**       | 10,000mb of data per month                                                                                                                      |
+| **Error Handling**    | - **Ensure the API key is valid** <br> **Check query parameters for typos unsupported metrics/areas.** <br> **Check for errors before deploying| 
+                        **|
+                        **Logic Here"|
+| **Notes      Responser Here Submit" validation
+Additop  Notes field|
+                        add retry Logic Errors Fall case checkup Datamodel Append execution |
+
+ Try connecting safe JSON Pagination Logic Data flow Retry case **!
