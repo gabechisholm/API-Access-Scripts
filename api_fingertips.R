@@ -1,10 +1,10 @@
 library(fingertipsR)
 library(parallel)
 library(tidyverse)
-setwd("YOUR-DESIRED-FILEPATH")
+setwd("YOUR-DESIRED-FILEPATH") # !!Requires \\ instead of \ in filepath!!
 all_indicators <- indicators()
 # Define the string to search for in the IndicatorName
-search_string <- "smok"  # Replace this with your actual search string
+search_string <- "smok"  # Replace this with your actual search string. A rogue period will appear between string and comment. Remove this :)
 selected_indicators <- all_indicators %>%
   filter(str_detect(IndicatorName, regex(paste0(".*", search_string, ".*"), ignore_case = TRUE)))
 
